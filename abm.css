@@ -1,0 +1,246 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #A29675;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Base styles for desktop */
+body {
+    font-size: 18px;
+    margin: 20px;
+  }
+  
+  /* For devices with a maximum width of 600px (like many phones) */
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+      margin: 10px;
+    }
+    /* Adjust layout for phone screens */
+    .container {
+      padding: 10px;
+    }
+  }
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('11.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px) brightness(0.5);
+    z-index: -1;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    background-color: #7c5624; /* Brown background color */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 20%;
+    height: 20%;
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #E8E5DA; /* Light color for contrast */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.vertical-hr {
+    border-left: 2px black ; /* Creates the vertical line */
+    height: 120px;
+    margin-left: 35px;
+  }
+  
+
+.header-right {
+    display: flex;
+    gap: 40px;
+    margin-right: 25px;
+}
+
+.header-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #A29675;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px;
+  }
+  
+  .header-button:hover {
+    transform: scale(1.1); /* Zooms in by 10% */
+  }
+
+.header-button:hover {
+    background-color: #3b5704;
+    color: white;
+    
+}
+
+/* Mobile view styles */
+body.mobile-view {
+    transform: scale(0.46); /* Shrink the whole webpage */
+    transform-origin: top left;
+    width: 200%;
+}
+
+/* Fade-in animation for background */
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.background.fade-in {
+    animation: fadeInBackground 5s forwards; /* Adjust the duration as needed */
+}
+
+/* Scroll animation for text sections */
+.scroll-effect {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from the left */
+    transition: opacity 2s ease-out, transform 1.8s ease-out;
+    margin: 200px;
+}
+
+.scroll-effect.show {
+    opacity: 1;
+    transform: translateX(0); /* Move to the center */
+}
+
+.scroll-effect.hide {
+    opacity: 0;
+    transform: translateX(-100px); /* Move back to the left */
+}
+
+/* Scroll animation for text sections */
+.scroll-effect {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from the left */
+    transition: opacity 2s ease-out, transform 1.8s ease-out;
+}
+
+.scroll-effect.show {
+    opacity: 1;
+    transform: translateX(0); /* Move to the center */
+}
+
+.scroll-effect.hide {
+    opacity: 0;
+    transform: translateX(-100px); /* Move back to the left */
+}
+
+/* Add spacing for scrolling */
+.content-section {
+    margin-top: 50px;
+    padding: 50px;
+    width: 80%;
+    max-width: 500px;
+    background: #CDC392;
+    border-radius: 10px;
+    box-shadow: 5 8px 20px rgba(0, 0, 0, 0.1);
+    transition: max-height 2.5s ease-in-out, opacity 2s ease-out, transform 1.8s ease-out;
+    overflow: hidden;
+    max-height: 100px; /* Initial height */
+}
+
+.content-section:hover {
+    max-height: 2900px; /* Expanded height */
+    transition: max-height 2.5s ease-in-out, opacity 2s ease-out, transform 2.8s ease-out;
+    transform: translateY(-20px);
+    text-align: justify;
+    text-align-last: center;
+    hyphens: auto;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.more-info {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Smooth transition for opacity */
+    text-align: justify;
+    text-align-last: center;
+    hyphens: auto;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.content-section:hover .more-info {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out; /* Smooth transition for opacity */
+}
+
+.header-1 {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    background-color: #7c5624; /* Brown background color */
+}
+
+.header-left-1 {
+    display: flex;
+    align-items: center;
+}
+
+.header-title-1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #E8E5DA; /* Light color for contrast */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+.header-logo-2 {
+    width: 20%;
+    height: 20%;
+    margin-right: 10px;
+}
+
+.vertical-hr-1 {
+    border-left: 2px black; /* Creates the vertical line */
+    height: 120px;
+    margin: 0 auto; /* Center the vertical line */
+}
