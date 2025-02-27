@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="abm.css">
+        <title> Humanities and Social Sciences Strand </title>
+    </head>
+
+    <body>
+        
+<div class="background"></div>
+
+<style>
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('11.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(5px) brightness(0.5);
+        z-index: -1;
+    
+    }
+</style>
+
+        <div class="header">
+            <div class="header-left">
+                <img src="4.png" alt="HUMSS LOGO" title="HUMSS LOGO" class="header-logo">
+                <h1 class="header-title">HUMANITIES  &  <br>  SOCIAL <br> SCIENCES </h1>
+                <hr class="vertical-hr">
+            </div>
+            <div class="header-right">
+                <a href="index.html"><button class="header-button" title="click me!">Return to Homepage</button></a>
+                <button class="header-button" id="mobile-view-button" title="Toggle Mobile View">Mobile View</button>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('mobile-view-button').addEventListener('click', function() {
+                document.body.classList.toggle('mobile-view');
+            });
+        </script>
+        
+    </body>
+</html>

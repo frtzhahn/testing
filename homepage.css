@@ -1,0 +1,356 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #A29675;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    font-weight: bold;
+}
+
+/* Base styles for desktop */
+body {
+    font-size: 18px;
+    margin: 20px;
+  }
+  
+  /* For devices with a maximum width of 600px (like many phones) */
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+      margin: 10px;
+    }
+    /* Adjust layout for phone screens */
+    .container {
+      padding: 10px;
+    }
+  }
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    background-color: #7c5624; /* Brown background color */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 20%;
+    height: 20%;
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #E8E5DA; /* Light color for contrast */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.vertical-hr {
+    border-left: 2px black ; /* Creates the vertical line */
+    height: 120px;
+    margin-left: 35px;
+  }
+  
+
+.header-right {
+    display: flex;
+    gap: 40px;
+    margin-right: 25px;
+}
+
+.header-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #A29675;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .header-button:hover {
+    transform: scale(1.1); /* Zooms in by 10% */
+  }
+
+.header-button:hover {
+    background-color: #3b5704;
+    color: white;
+    
+}
+
+.logo-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.logo-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure logos maintain aspect ratio and fit within the container */
+    transition: opacity 0.5s ease-in-out; /* Faster transition */
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure logos maintain aspect ratio and fit within the container */
+}
+
+.logo8 {
+    width: 250%;
+    height: 250%;
+    
+}
+
+/* Hide all logos initially */
+.logo {
+    opacity: 0;
+}
+
+/* Active logo fully visible */
+.logo.active {
+    opacity: 1;
+}
+
+/* Text that replaces logos */
+.text-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.8s ease-in-out;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+    background: #7c5624; /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Show text after logos */
+.text-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Scroll animation for text sections */
+.scroll-effect {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from the left */
+    transition: opacity 2s ease-out, transform 1.8s ease-out;
+    margin: 200px;
+}
+
+.scroll-effect.show {
+    opacity: 1;
+    transform: translateX(0); /* Move to the center */
+}
+
+.scroll-effect.hide {
+    opacity: 0;
+    transform: translateX(-100px); /* Move back to the left */
+}
+
+/* Scroll animation for text sections */
+.scroll-effect {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from the left */
+    transition: opacity 2s ease-out, transform 1.8s ease-out;
+}
+
+.scroll-effect.show {
+    opacity: 1;
+    transform: translateX(0); /* Move to the center */
+}
+
+.scroll-effect.hide {
+    opacity: 0;
+    transform: translateX(-100px); /* Move back to the left */
+}
+
+/* Add spacing for scrolling */
+.content-section {
+    margin-top: 50px;
+    padding: 50px;
+    width: 80%;
+    max-width: 500px;
+    background: #CDC392;
+    border-radius: 10px;
+    box-shadow: 5 8px 20px rgba(0, 0, 0, 0.1);
+    transition: max-height 2.5s ease-in-out, opacity 2s ease-out, transform 1.8s ease-out;
+    overflow: hidden;
+    max-height: 100px; /* Initial height */
+}
+
+.content-section:hover {
+    max-height: 500px; /* Expanded height */
+    transition: max-height 2.5s ease-in-out, opacity 2s ease-out, transform 2.8s ease-out;
+    transform: translateY(-20px);
+    text-align: justify;
+    text-align-last: center;
+    hyphens: auto;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.more-info {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Smooth transition for opacity */
+    text-align: justify;
+    text-align-last: center;
+    hyphens: auto;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.content-section:hover .more-info {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out; /* Smooth transition for opacity */
+}
+
+.short-line {
+    border: 3px solid rgb(86, 75, 45);
+    width: 20%;
+    margin: 20px auto;
+}
+
+.long-line {
+    border: 5px solid rgb(86, 75, 45);
+    width: 40%;
+    margin: 20px auto;
+}
+
+/* Horizontal Scroll Section */
+.scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.strands {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 150px; /* Set the width to match one image */
+    gap: 10px; /* Add space between images */
+}
+
+.strand {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 150px; /* Set a fixed height */
+    object-fit: contain; /* Ensure images maintain aspect ratio and fit within the container */
+}
+
+.scroll-button {
+    background-color: #A29675;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+.header-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #7c5624; /* Brown background color */
+}
+
+/* Mobile view styles */
+body.mobile-view {
+    transform: scale(0.46); /* Shrink the whole webpage */
+    transform-origin: top left;
+    width: 200%;
+    height: 50%;
+    overflow-x: hidden;
+
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 3s forwards; /* Adjust the duration as needed */
+}
+
+/* experiment*/
+/* Add this to the existing CSS file */
+
+/* Background zoom effect */
+.fade-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('11.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px) brightness(0.5);
+    z-index: -1;
+    transition: transform 0.5s ease-in-out; /* Add transition for smooth zoom effect */
+}
+
+/* Zoom in effect on hover */
+.text-container:hover ~ .background {
+    transform: scale(150px); /* Slightly zoom in the background */
+}
