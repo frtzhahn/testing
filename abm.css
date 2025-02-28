@@ -1,3 +1,12 @@
+body {
+    min-width: 1024px;
+}
+@media (max-width: 768px) { 
+    body {
+        width: 1024px;
+        overflow-x: auto;
+    }
+}
 
 body {
     display: flex;
